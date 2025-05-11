@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Purple Neon Image Gallery</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #0d0d0d;
+            color: #b300ff;
+        }
+
+        h1 {
+            font-size: 36px;
+            color: #b300ff;
+            text-shadow: 0 0 10px #b300ff, 0 0 20px #b300ff;
+        }
+
+        form {
+            margin-bottom: 30px;
+        }
+
+        input[type="file"] {
+            background-color: #1a1a1a;
+            color: #b300ff;
+            border: 2px solid #b300ff;
+            padding: 10px;
+            border-radius: 5px;
+        }
+
+        input[type="submit"] {
+            padding: 10px 15px;
+            background-color: #b300ff;
+            color: #0d0d0d;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+            margin-left: 10px;
+            box-shadow: 0 0 10px #b300ff, 0 0 20px #b300ff;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #d633ff;
+        }
+
+        button {
+            padding: 10px 20px;
+            background-color: #ff66ff;
+            color: #0d0d0d;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 18px;
+            box-shadow: 0 0 10px #ff66ff, 0 0 20px #ff66ff;
+        }
+
+        button:hover {
+            background-color: #ff99ff;
+        }
+
+        #result {
+            margin-top: 20px;
+            padding: 10px;
+            border: 1px dashed #b300ff;
+            background-color: #1a1a1a;
+            color: #ffffff;
+        }
+    </style>
+</head>
+<body>
+
+    <form enctype="multipart/form-data" action="/upload" method="post">
+        <input type="file" name="image" />
+        <input type="submit" value="Upload" />
+    </form>
+
+    <h1>Image Gallery</h1>
+    <button onclick="getUsers()">Load Images</button>
+    <div id="result"></div>
+    <script src="function.js"></script>
+
+</body>
+</html>
