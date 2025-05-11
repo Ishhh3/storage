@@ -1,5 +1,5 @@
 function getUsers() {
-    fetch("http://localhost:8080/api")
+    fetch("https://storage-322p.onrender.com/api")
     .then((response) => {
         if (!response.ok) {
             throw new Error(`HTTP error! status: ${response.status}`);
@@ -18,7 +18,7 @@ function getUsers() {
         
         data.forEach((element) => {
             const img = document.createElement('img');
-            img.src = `http://localhost:8080/images?id=${element.id}`;
+            img.src = `https://storage-322p.onrender.com/images?id=${element.id}`;
             img.alt = `Image ${element.id}`;
             img.style.maxWidth = '200px';
             img.style.height = 'auto';
